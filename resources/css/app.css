@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@source "../views";
+
+.livewire-pagination button {
+    cursor: pointer;
+}
+
+.bg-surface-dark {
+    --tw-bg-opacity: 1;
+    background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
