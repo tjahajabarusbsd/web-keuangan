@@ -50,7 +50,7 @@ class Home extends Component
       });
 
     return view('livewire.home', [
-      'posts' => $posts->paginate(3),
+      'posts' => $posts->paginate(9),
     ]);
   }
 }
