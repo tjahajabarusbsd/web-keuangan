@@ -1,6 +1,6 @@
 <div>
     <div class="py-11 mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mb-4 flex flex-wrap gap-2">
+        <div class="mb-4 mx-auto max-w-2xl lg:max-w-full flex flex-wrap gap-2">
             <button wire:click="$set('selectedCategory', null)"
                 class="px-4 py-2 rounded-sm cursor-pointer bg-gray-200 hover:bg-gray-300 {{ is_null($selectedCategory) ? 'bg-gray-400 text-white' : '' }}">
                 All
@@ -12,7 +12,7 @@
                 </button>
             @endforeach
         </div>
-        <div class="flex justify-center max-w-xl mt-10">
+        <div class="flex justify-center mx-auto max-w-2xl lg:max-w-full mt-10">
             <input type="text" wire:model.live="search" placeholder="Cari pekerjaan..."
                 class="w-full border border-gray-600 text-white placeholder-gray-300 rounded-xl px-5 py-3 focus:outline-2 focus:outline-violet-500" />
         </div>
@@ -23,7 +23,7 @@
             @else
                 @foreach ($posts as $post)
                     <article wire:key="{{ $post->id }}"
-                        class="flex max-w-xl flex-col items-start justify-between lg:mb-10 bg-slate-800 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-[0px_0px_20px_rgba(255,255,255,0.2)]">
+                        class="w-full flex flex-col items-start justify-center lg:mb-10 bg-slate-800 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-[0px_0px_20px_rgba(255,255,255,0.2)]">
                         <div class="flex items-center gap-x-4 text-xs">
                             <time datetime="{{ $post->created_at->format('Y-m-d') }}"
                                 class="text-white">{{ $post->created_at->format('M d, Y') }}</time>
